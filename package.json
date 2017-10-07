@@ -3,8 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "repository": "https://github.com/jameszaa333/cmm221.git",
+  "author": "",
   "dependencies": {
     "express": "^4.16.1",
     "twig": "^1.10.5"
+  },
+  
+  "scripts" : {
+    "dev": "nodemon -e js,twig server.js"
   }
+
 }
+  
+
+
+
