@@ -18,8 +18,8 @@
         </div>
         <div class="thumbnail">
                 <div class="columns is-marginless">
-                    {% for item in thumbnail %}
-            <div class="column thumbnail-item is-paddingless" style="background-image: url({{ item.url }});">{{ item.title }}</div>
+                    {% for item in thumbnails %}
+            <div class="column thumbnail-item is-paddingless" style="background-image: url({{ item.image }});">{{ item.title }}</div>
                     {% endfor %}
             </div>
         </div>
@@ -39,6 +39,24 @@
             
 
             <div class="columns is-multiline">
+                {% for item in news %}
+                <a href="#" class="column is-one-third">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-3by2">
+                                <img src="{{ item.image }}" alt="{{ item.title }}">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="title is-spaced is-4">{{ item.title }}</h3>
+                            <p>
+                                {{ item.shortDescription }}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+<!--
             <a href="#" class="column is-one-third">
                 <div class="card">
                 <div class="card-image">
@@ -170,6 +188,7 @@
                             </div>
                         </div>
                     </a>
+-->
                 
                 </div>
             </div>
