@@ -1,49 +1,26 @@
-<!DOCTYPE html>
-<html lang="en"> <!--การกำหนดภาษาหลักให้เว็บไซต์-->
-<head>
-    <meta charset="UTF-8"> <!--ตั้งไว้ให้เว็บแสดงผลตัวอักษรไทยได้จ้ะ-->
-    <title>CMM 19</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
-    <link rel="stylesheet" href="/assets/home.css">
-</head>
-<body>
-    <header><div class="has-text-centered">
-    <img src="/assets/images/logo.png" alt="" width="145" height="auto">
-        </div>
+{% extends 'layout/base.twig' %}
 
-        <nav class="navbar-tabs">
-        <a href="#" class="navbar-item">WORK</a>
-        <a href="#" class="navbar-item">LIFESTYLE</a>
-        <a href="#" class="navbar-item">MUSIC</a>
-        <a href="#" class="navbar-item">WORK</a>
-        <a href="#" class="navbar-item">WORK</a>
-        <a href="#" class="navbar-item">WORK</a>
-        <a href="#" class="navbar-item">WORK</a>
-        <a href="#" class="navbar-item">WORK</a>
-        </nav>
-    </header>
+{% block stylesheet %}
+ <link rel="stylesheet" href="/assets/home.css">
+{% endblock %}
+
+{% block content %}
+   
     
     <main>
     <section class="banner">
         <div class="highlight">
         <div class="columns">
-            <div class="column highlight-item">
-                7 For 7
+            <div class="column highlight-item" style="background-image: url({{ highlight.url }});">
+                <h1>{{ highlight.title }}</h1>
             </div>
             </div>
         </div>
         <div class="thumbnail">
                 <div class="columns is-marginless">
-
-                    {% for item in thumbnails %}
-            <div class="column thumbnail-item is-paddingless" style="background-image: url({{ item.image }});">{{ item.title }}</div>
+                    {% for item in thumbnail %}
+            <div class="column thumbnail-item is-paddingless" style="background-image: url({{ item.url }});">{{ item.title }}</div>
                     {% endfor %}
-
-            <div class="column thumbnail-item is-paddingless" style="background-image: url(assets/images/home/banner/thumbnail-1.jpg);">Never Ever</div>
-            <div class="column thumbnail-item is-paddingless" style="background-image: url(assets/images/home/banner/thumbnail-2.jpg);">If You Do</div>
-            <div class="column thumbnail-item is-paddingless" style="background-image: url(assets/images/home/banner/thumbnail-3.jpg);">Hard Carry</div>
-            <div class="column thumbnail-item is-paddingless" style="background-image: url(assets/images/home/banner/thumbnail-4.jpg);">Fly</div>
-
             </div>
         </div>
         </section>
@@ -62,24 +39,6 @@
             
 
             <div class="columns is-multiline">
-                {% for item in news %}
-                <a href="#" class="column is-one-third">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image is-3by2">
-                                <img src="{{ item.image }}" alt="{{ item.title }}">
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <h3 class="title is-spaced is-4">{{ item.title }}</h3>
-                            <p>
-                                {{ item.shortDescription }}
-                            </p>
-                        </div>
-                    </div>
-                </a>
-                {% endfor %}
-<!--
             <a href="#" class="column is-one-third">
                 <div class="card">
                 <div class="card-image">
@@ -211,12 +170,10 @@
                             </div>
                         </div>
                     </a>
--->
                 
                 </div>
             </div>
 
         </section>
     </main>
-</body>
-</html>
+{% endblock %}
