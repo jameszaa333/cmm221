@@ -12,9 +12,12 @@
     "sequelize": "^4.14.0",
     "twig": "^1.10.5"
 <<<<<<< HEAD
+<<<<<<< HEAD
   },
   "scripts": {
     "dev": "nodemon -e js,twig server.js"
+=======
+>>>>>>> parent of 9e27217... Add content to twig
 =======
 >>>>>>> parent of 9e27217... Add content to twig
   }

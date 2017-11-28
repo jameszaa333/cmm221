@@ -3,6 +3,7 @@ const News = require('../models/news')
 
 exports.index = function(req,res){
 <<<<<<< HEAD
+<<<<<<< HEAD
     let content = {
         highlight: {
             url: '/assets/images/home/banner/highlight.jpg',
@@ -57,6 +58,9 @@ exports.index = function(req,res){
 //        res.render('home.twig', content)
 //    })
     
+=======
+    res.render('home.twig')
+>>>>>>> parent of 9e27217... Add content to twig
 =======
     res.render('home.twig')
 >>>>>>> parent of 9e27217... Add content to twig
