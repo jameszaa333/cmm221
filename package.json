@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "repository": "https://github.com/jameszaa333/cmm221.git",
-  "author": "",
   "dependencies": {
     "bcrypt": "^1.0.3",
     "dotenv": "^4.0.0",
@@ -13,8 +11,11 @@
     "mysql2": "^1.4.2",
     "sequelize": "^4.14.0",
     "twig": "^1.10.5"
+<<<<<<< HEAD
   },
   "scripts": {
     "dev": "nodemon -e js,twig server.js"
+=======
+>>>>>>> parent of 9e27217... Add content to twig
   }
 }

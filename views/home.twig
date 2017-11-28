@@ -1,26 +1,49 @@
-{% extends 'layout/base.twig' %}
+<!DOCTYPE html>
+<html lang="en"> <!--การกำหนดภาษาหลักให้เว็บไซต์-->
+<head>
+    <meta charset="UTF-8"> <!--ตั้งไว้ให้เว็บแสดงผลตัวอักษรไทยได้จ้ะ-->
+    <title>CMM 19</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.3/css/bulma.min.css">
+    <link rel="stylesheet" href="/assets/home.css">
+</head>
+<body>
+    <header><div class="has-text-centered">
+    <img src="/assets/images/logo.png" alt="" width="145" height="auto">
+        </div>
 
-{% block stylesheet %}
- <link rel="stylesheet" href="/assets/home.css">
-{% endblock %}
-
-{% block content %}
-   
+        <nav class="navbar-tabs">
+        <a href="#" class="navbar-item">WORK</a>
+        <a href="#" class="navbar-item">LIFESTYLE</a>
+        <a href="#" class="navbar-item">MUSIC</a>
+        <a href="#" class="navbar-item">WORK</a>
+        <a href="#" class="navbar-item">WORK</a>
+        <a href="#" class="navbar-item">WORK</a>
+        <a href="#" class="navbar-item">WORK</a>
+        <a href="#" class="navbar-item">WORK</a>
+        </nav>
+    </header>
     
     <main>
     <section class="banner">
         <div class="highlight">
         <div class="columns">
-            <div class="column highlight-item" style="background-image: url({{ highlight.url }});">
-                <h1>{{ highlight.title }}</h1>
+            <div class="column highlight-item">
+                7 For 7
             </div>
             </div>
         </div>
         <div class="thumbnail">
                 <div class="columns is-marginless">
+<<<<<<< HEAD
                     {% for item in thumbnails %}
             <div class="column thumbnail-item is-paddingless" style="background-image: url({{ item.image }});">{{ item.title }}</div>
                     {% endfor %}
+=======
+            <div class="column thumbnail-item is-paddingless" style="background-image: url(assets/images/home/banner/thumbnail-1.jpg);">Never Ever</div>
+            <div class="column thumbnail-item is-paddingless" style="background-image: url(assets/images/home/banner/thumbnail-2.jpg);">If You Do</div>
+            <div class="column thumbnail-item is-paddingless" style="background-image: url(assets/images/home/banner/thumbnail-3.jpg);">Hard Carry</div>
+            <div class="column thumbnail-item is-paddingless" style="background-image: url(assets/images/home/banner/thumbnail-4.jpg);">Fly</div>
+>>>>>>> parent of 9e27217... Add content to twig
             </div>
         </div>
         </section>
@@ -195,4 +218,5 @@
 
         </section>
     </main>
-{% endblock %}
+</body>
+</html>
